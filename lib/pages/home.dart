@@ -11,12 +11,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
         title: Text(
           'Catalog App...',
-          style: GoogleFonts.pacifico(color: Colors.black, fontSize: 30),
+          style: GoogleFonts.pacifico(color: Colors.black, fontSize: 25),
         ),
         centerTitle: true,
       ),
