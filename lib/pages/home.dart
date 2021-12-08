@@ -49,11 +49,39 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(16.0),
           child:
               (CatalogModels.items != null && CatalogModels.items!.isNotEmpty)
-                  ? ListView.builder(
-                      itemCount: CatalogModels.items?.length,
-                      itemBuilder: (context, index) => ItemWidget(
-                        item: CatalogModels.items![index],
-                      ),
+                  ?
+                  // ListView.builder(
+                  //     itemCount: CatalogModels.items?.length,
+                  //     itemBuilder: (context, index) => ItemWidget(
+                  //       item: CatalogModels.items![index],
+                  //     ),
+                  //   )
+
+                  GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 15,
+                          crossAxisSpacing: 15),
+                      itemBuilder: (context, index) {
+                        final item = CatalogModels.items![index];
+                        return Card(
+                            clipBehavior: Clip.antiAlias,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            child: GridTile(
+                                header: Container(
+                                    padding: EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: Colors.blue,
+                                    ),
+                                    child: Text(
+                                      item.name,
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                footer: Text(item.price.toString()),
+                                child: Image.network(item.image)));
+                      },
+                      itemCount: CatalogModels.items!.length,
                     )
                   : Center(child: CircularProgressIndicator())),
     );
