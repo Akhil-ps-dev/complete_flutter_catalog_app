@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:velocity_x/src/extensions/string_ext.dart';
+import 'package:velocity_x/velocity_x.dart';
+
 class CatalogHeader extends StatelessWidget {
   const CatalogHeader({Key? key}) : super(key: key);
 
@@ -11,8 +11,8 @@ class CatalogHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("Ecommerce App",
-            style:
-                GoogleFonts.pacifico(fontSize: 25, color: (MyTheme.darkblue))),
+            style: GoogleFonts.pacifico(
+                fontSize: 25, color: (context.theme.accentColor))),
         "Trending Products".text.make(),
       ],
     );

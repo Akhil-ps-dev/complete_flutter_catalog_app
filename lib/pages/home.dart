@@ -42,27 +42,25 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-        backgroundColor: Colors.white,
-        child: Icon(
-          CupertinoIcons.cart,
-          color: MyTheme.darkblue,
-        ),
+        backgroundColor: context.theme.buttonColor,
+        child: Icon(CupertinoIcons.cart, color: Colors.white),
       ),
       backgroundColor: context.canvasColor,
       body: SafeArea(
         child: Container(
-            padding: Vx.m32,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CatalogHeader(),
-                if (CatalogModels.items != null &&
-                    CatalogModels.items!.isNotEmpty)
-                  CatalogList().py16().expand()
-                else
-                  CircularProgressIndicator().centered().expand(),
-              ],
-            )),
+          padding: Vx.m32,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CatalogHeader(),
+              if (CatalogModels.items != null &&
+                  CatalogModels.items!.isNotEmpty)
+                CatalogList().py16().expand()
+              else
+                CircularProgressIndicator().centered().expand(),
+            ],
+          ),
+        ),
       ),
 
       // appBar: AppBar(

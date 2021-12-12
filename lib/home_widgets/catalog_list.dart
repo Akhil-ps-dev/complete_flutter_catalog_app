@@ -15,7 +15,7 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModels.items!.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModels.items![index];
+        final catalog = CatalogModels.items[index];
 
         return InkWell(
           onTap: () => Navigator.push(
@@ -55,7 +55,7 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              catalog.name.text.lg.color(MyTheme.darkblue).bold.make(),
+              catalog.name.text.lg.color(context.accentColor).bold.make(),
               catalog.desc.text.violet400.make(),
               10.heightBox,
               ButtonBar(
@@ -65,8 +65,8 @@ class CatalogItem extends StatelessWidget {
                   "\$${catalog.price}".text.xl.red500.make(),
                   ElevatedButton(
                     style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(MyTheme.darkblue)),
+                        backgroundColor: MaterialStateProperty.all(
+                            context.theme.buttonColor)),
                     onPressed: () {},
                     // icon: Icon(Icons.shopping_cart),
                     child: Text('Add to cart'),
@@ -77,6 +77,6 @@ class CatalogItem extends StatelessWidget {
           ))
         ],
       ),
-    ).white.rounded.square(150).make().py16();
+    ).color(context.cardColor).rounded.square(150).make().py16();
   }
 }

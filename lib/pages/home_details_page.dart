@@ -14,12 +14,10 @@ class HomeDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-      ),
-      backgroundColor: MyTheme.creamColor,
+      appBar: AppBar(backgroundColor: Colors.transparent),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           buttonPadding: Vx.mH8,
           alignment: MainAxisAlignment.spaceBetween,
@@ -27,7 +25,8 @@ class HomeDetailsPage extends StatelessWidget {
             "\$${catalog.price}".text.xl4.red500.make(),
             ElevatedButton.icon(
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(MyTheme.darkblue)),
+                  backgroundColor:
+                      MaterialStateProperty.all(context.theme.buttonColor)),
               onPressed: () {},
               icon: Icon(Icons.shopping_cart),
               label: Text('Add to cart'),
@@ -42,14 +41,14 @@ class HomeDetailsPage extends StatelessWidget {
             Hero(
               tag: Key(catalog.id.toString()),
               child: Image.network(catalog.image),
-            ).h32(context).p16(),
+            ).h32(context),
             Expanded(
                 child: VxArc(
-              height: 20.0,
+              height: 40.0,
               edge: VxEdge.TOP,
               arcType: VxArcType.CONVEY,
               child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
