@@ -11,12 +11,21 @@ class MyTheme {
           iconTheme: IconThemeData(color: Colors.black),
           textTheme: Theme.of(context).textTheme));
 
-  static ThemeData darkTheme(BuildContext context) =>
-      ThemeData(brightness: Brightness.dark);
+  static ThemeData darkTheme(BuildContext context) => ThemeData(
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      cardColor: Colors.black,
+      canvasColor: darkcreamColor,
+      appBarTheme: AppBarTheme(
+          color: Colors.black,
+          elevation: 0.0,
+          iconTheme: IconThemeData(color: Colors.black),
+          textTheme: Theme.of(context).textTheme));
 
 //colors
 
   static Color creamColor = Color(0xFFF5f5f5);
+  static Color darkcreamColor = Color(0xFF242B2E);
+
   static Color darkblue = Color(0xFF120E43);
   static Color lightblue = Color(0xFF75688c);
 }

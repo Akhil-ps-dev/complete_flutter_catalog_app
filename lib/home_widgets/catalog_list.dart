@@ -59,20 +59,20 @@ class CatalogItem extends StatelessWidget {
               catalog.desc.text.violet400.make(),
               10.heightBox,
               ButtonBar(
-                buttonPadding: Vx.mH8,
+                buttonPadding: EdgeInsets.zero,
                 alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   "\$${catalog.price}".text.xl.red500.make(),
-                  ElevatedButton.icon(
+                  ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(MyTheme.darkblue)),
                     onPressed: () {},
-                    icon: Icon(Icons.shopping_cart),
-                    label: Text('Buy'),
+                    // icon: Icon(Icons.shopping_cart),
+                    child: Text('Add to cart'),
                   ),
                 ],
-              ),
+              ).pOnly(right: 8.0)
             ],
           ))
         ],

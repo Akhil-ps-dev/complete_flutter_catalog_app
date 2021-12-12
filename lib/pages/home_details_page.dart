@@ -30,8 +30,8 @@ class HomeDetailsPage extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(MyTheme.darkblue)),
               onPressed: () {},
               icon: Icon(Icons.shopping_cart),
-              label: Text('Buy'),
-            ).wh(100, 50)
+              label: Text('Add to cart'),
+            ).wh(150, 50)
           ],
         ).p32(),
       ),
