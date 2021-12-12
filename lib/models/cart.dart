@@ -2,13 +2,18 @@ import 'package:flutter_catalog/models/items.dart';
 
 class CartModel {
   //catalog field
+  static final cartModel = CartModel._indernal();
+
+  CartModel._indernal();
+  factory CartModel() => cartModel;
+
   late CatalogModels _catalog;
   //Collection of IDs- store ids of each items
 
   final List<int> _itemIds = [];
 //get catalog
   CatalogModels get catalog => _catalog;
-  set Catalog(CatalogModels newCatalog) {
+  set catalog(CatalogModels newCatalog) {
     assert(newCatalog != null);
     _catalog = newCatalog;
   }
@@ -32,6 +37,4 @@ class CartModel {
   void remove(Item item) {
     _itemIds.remove(item.id);
   }
-
-
 }
