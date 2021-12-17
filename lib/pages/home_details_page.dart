@@ -15,7 +15,7 @@ class HomeDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.transparent),
+      // appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
         color: context.cardColor,
@@ -24,7 +24,9 @@ class HomeDetailsPage extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
           children: [
             "\$${catalog.price}".text.xl4.red500.make(),
-          AddToCart(catalog: catalog,).wh(150, 50)
+            AddToCart(
+              catalog: catalog,
+            ).wh(150, 50)
           ],
         ).p32(),
       ),

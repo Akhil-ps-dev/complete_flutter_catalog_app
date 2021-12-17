@@ -68,7 +68,53 @@ class MyDrawer extends StatelessWidget {
                     'Privacy',
                     style: TextStyle(fontSize: 20, color: Colors.black),
                   )),
-            )
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.notifications_active,
+                color: Colors.black,
+              ),
+              title: Title(
+                  color: Colors.white,
+                  child: Text(
+                    'Notification',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  )),
+            ),
+//? break n
+            SizedBox(
+              height: 190,
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.person,
+                color: Colors.black,
+              ),
+              title: Title(
+                  color: Colors.white,
+                  child: Text(
+                    'Account',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  )),
+            ),
+            // SizedBox(
+            //   height: 120,
+            // ),
+            ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: Colors.black,
+              ),
+              title: Title(
+                  color: Colors.white,
+                  child: Text(
+                    'Settings',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  )),
+            ),
           ],
         ),
       ),

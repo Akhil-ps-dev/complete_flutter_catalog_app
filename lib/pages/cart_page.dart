@@ -14,6 +14,7 @@ class CartPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.grey,
         title: "My Cart".text.make(),
+        centerTitle: true,
       ),
       body: Column(
         children: [
@@ -49,9 +50,8 @@ class _CartTotal extends StatelessWidget {
                 }),
             ElevatedButton(
                     onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text(
-                              'Buying not supported yet...pinna entin nikkanu enittu podeyy.')));
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Buying not supported yet.')));
                     },
                     style: ButtonStyle(
                       backgroundColor:

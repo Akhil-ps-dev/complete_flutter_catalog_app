@@ -63,6 +63,12 @@
             "price": 899,
             "color": "#7c95eb",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNHd7FwarbxA1xdMFt24KazjcR4dWPH_t_T5dz4YNK1s7rJAQ8gOIuR_NRw6eeiQgFhbZ9sAN&usqp=CAc"
-        }
-    ]
+        },
+        {
+            "id": 9,
+            "name": "MacBook Pro 14",
+            "desc": "MacBook Pro 141 2021 edition",
+            "price": 1000,
+            "color": "#7c95eb",
+            "image": "https://m.media-amazon.com/images/I/61vFO3R5UNL._SL1500_.jpg"}]
 }
