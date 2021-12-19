@@ -71,7 +71,7 @@ class CartList extends StatelessWidget {
     final CartModel _cart = (VxState.store as MyStore).cart;
 
     return _cart.items.isEmpty
-        ? "Noting to show".text.xl4.makeCentered()
+        ? "Nothing to show...😔".text.xl4.makeCentered()
         : ListView.builder(
             itemCount: _cart.items.length,
             itemBuilder: (context, index) => ListTile(

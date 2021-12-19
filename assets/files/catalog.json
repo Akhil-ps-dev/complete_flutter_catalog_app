@@ -70,5 +70,33 @@
             "desc": "MacBook Pro 141 2021 edition",
             "price": 1000,
             "color": "#7c95eb",
-            "image": "https://m.media-amazon.com/images/I/61vFO3R5UNL._SL1500_.jpg"}]
+            "image": "https://m.media-amazon.com/images/I/61vFO3R5UNL._SL1500_.jpg"
+        },
+
+
+
+
+        {
+            "id": 10,
+            "name": "i phone 8",
+            "desc": "i phone 8 2015 edition",
+            "price": 180,
+            "color": "#7c95eb",
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone8-silver?wid=700&hei=700&fmt=jpeg&qlt=95&.v=1573770039552"
+        },
+         
+        {
+                "id": 11,
+                "name": "i phone 12 mini",
+                "desc": "i phone 12 mini 2021 edition",
+                "price": 180,
+                "color": "#7c95eb",
+                "image": "https://www.aptronixindia.com/media/catalog/product/cache/31f0162e6f7d821d2237f39577122a8a/i/p/iphone-12-pro-blue-hero_1_5.png"
+            }            
+            
+        
+        
+        
+        
+        ]
 }
